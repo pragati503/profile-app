@@ -1,0 +1,73 @@
+<html>
+<head>
+	<title> App by kamal sir </title>
+	<style>
+		* { font-size:50px font-family:Century; }
+			body {background-color:pink;}
+		h1 { background-color:black; color:white;}
+	</style>
+	<script>
+			function show()
+			{
+				event.preventDefault();
+				let name = document.getElementById("name");
+				let phone = document.getElementById("phone");
+				let male = document.getElementById("male");
+				let female = document.getElementById("female");
+				let python = document.getElementById("python");
+				let java = document.getElementById("java");
+				let js = document.getElementById("js");
+				let msg = document.getElementById("msg");
+
+				let gender = "";
+				if (male.checked)				gender = "male";
+				else						gender = "female";
+				
+				let prog = "";
+				if (python.checked)			 prog += "python";
+				if (java.checked)			   	 prog += "java";
+				if (js.checked)			       prog += "js";
+
+				let ans = name.value + " " + phone.value + " " + gender + " " + prog;
+				msg.innerHTML = ans;
+
+			}
+	</script>
+</head>
+
+<body>
+<center>
+			<h1> profile App </h1>
+			<form onsubmit="show()">
+					<input type="text" placeholder="enter name" id="name"/>
+					<br><br>
+					<input type="text" placeholder="enter phone" id="phone"/>
+					<br><br>
+					<label> gender </label>
+					<br><br>
+					<input type="radio" name="g" id="male" checked=true/> male
+					<input type="radio" name="g" id="male" /> female
+					<br><br>
+					<label> software </label>
+					<br><br>
+					<input type="checkbox" id="python" /> python
+					<input type="checkbox" id="java" /> java
+					<input type="checkbox" id="js" /> javascript
+					<br><br>
+					<input type="submit" />
+		</form>
+		<h2 id="msg" />
+</center>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+			
